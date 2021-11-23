@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    width: 100%;
+   
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: wheat;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 16px;
+  }
+  
+  p {
+    padding-left: 12px;
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 30%;
+    height: 243px; /* only for demonstration, should be removed */
+    background: lightblue;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: pink;
+    color: black;
+  }
+  
+  /* Clear floats after the columns */
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: wheat;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    
+  }
+  darkmode {
+
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav,
+    article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @keyframes example {
+    from {
+      width:0px;
+      transform: rotate(180deg);
+    }
+    to {
+      width: 250px;
+      transform: rotate(0deg);
+    }
+  }
+  
+  #headshot {
+    width: 300px;
+    animation-name: example;
+    animation-duration: 2s;   
+    animation-timing-function: ease;
+  }
+
+  .darkmode{
+      position: absolute;
+      left: 90%;
+      top: 2%;
+      width: 50pt;
+      height: 50pt;
+  }
+  .sweetmode{
+    position: absolute;
+    left: 80%;
+    top: 2%;
+    width: 50pt;
+    height: 50pt;
+}
